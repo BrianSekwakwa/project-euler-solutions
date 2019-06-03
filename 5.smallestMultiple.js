@@ -10,18 +10,8 @@ let counter = 1;
 
 function smallestMultiple() {
   while (isSmallestMultiple === false) {
-    if (
-      counter % 2 === 0 &&
-      counter % 3 === 0 &&
-      counter % 4 === 0 &&
-      counter % 5 === 0 &&
-      counter % 7 === 0
-    ) {
-      console.log("smallest multiple is " + counter);
-      isSmallestMultiple = true;
-    } else {
-      console.log(counter);
-      counter++;
+    for (let i = 1; i <= 10 ; i++) {
+
     }
   }
 }
