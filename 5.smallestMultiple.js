@@ -23,6 +23,7 @@ function smallestMultiple() {
       if (result === 0) {
         evenlyDivisible.push(i);
         if (evenlyDivisible.length === 10) {
+          console.log(counter);
           isSmallestMultiple = true;
         }
       }

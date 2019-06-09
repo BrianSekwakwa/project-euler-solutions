@@ -4,8 +4,7 @@
 
 // By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-// Big O is strong with this one lool too many operations: solution 1
-
+// Gives right answer but wrong way to do things: use while loop when refactoring
 function evenFobonacci(num) {
   let prevNumber = 1,
     nextNumber = 2,
@@ -28,4 +27,4 @@ function evenFobonacci(num) {
   console.log(`The sum of even Fibonacci numbers is ${sum}`);
 }
 
-evenFobonacci(20);
+evenFobonacci(100);
