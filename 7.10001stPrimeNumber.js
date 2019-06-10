@@ -12,31 +12,30 @@
 // Return the last number in the array that is the 10 001st prime number
 
 let isFull = false;
-let count = 10;
-let primeArray = [2, 3, 5, 7];
+let count = 2;
+let primeArray = [];
 
-function tenThounsandOne() {
-  // Loop through natural numbers
+function tenThounsandOne(len) {
   while (isFull === false) {
-    // Check to see if its a prime number or not
-    if (
-      count % 2 === 0 ||
-      count % 3 === 0 ||
-      count % 5 === 0 ||
-      count % 7 === 0 ||
-      count % 11 === 0
-    ) {
+    if (primeArray.length === len) {
+      isFull = true;
     } else {
-      primeArray.push(count);
-      if (primeArray.length === 50) {
-        console.log(primeArray);
-        isFull = true;
+      for (let j = 2; j <= count; j++) {
+        let result = count % j;
+        if (result === 0) {
+          if (j !== count) {
+            break;
+          } else {
+            primeArray.push(j);
+          }
+        }
       }
+
+      count++;
     }
-    count++;
   }
+
+  console.log(primeArray[primeArray.length - 1]);
 }
 
-tenThounsandOne();
-
-// 104743
+tenThounsandOne(10001);

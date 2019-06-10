@@ -15,9 +15,15 @@ let primeFactors = [];
 function primeFactor(num) {
   // Finding prime numbers up to n
   for (let i = 10; i <= num; i++) {
-    if (i % 2 === 0 || i % 3 === 0 || i % 5 === 0 || i % 7 === 0) {
-    } else {
-      primeNumbers.push(i);
+    for (let j = 2; j <= i; j++) {
+      let result = i % j;
+      if (result === 0) {
+        if (j !== i) {
+          break;
+        } else {
+          primeNumbers.push(j);
+        }
+      }
     }
   }
 
