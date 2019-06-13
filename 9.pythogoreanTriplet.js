@@ -10,6 +10,9 @@
 
 // Problem Break Down
 
+// Loop through the natural numbers to see if two of them make a pythogorean triplet
+// Find the product of the a,b,c if the natural numbers give the pythogorean triplet
+
 function pythogoreanTriplet() {
   let tripletSum = 1000;
   let abSum;
